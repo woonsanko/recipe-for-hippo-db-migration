@@ -30,7 +30,7 @@ TOOL_HOME=`cd "$PRGDIR/.." ; pwd`
 
 _LIBPATH=
 if [ -d "$TOOL_HOME/lib" ]; then
-  for i in "$TOOL_HOME"/*.jar; do
+  for i in "$TOOL_HOME"/lib/*.jar; do
     _LIBPATH="$_LIBPATH":"$i"
   done
 fi
@@ -39,11 +39,12 @@ CLASSPATH="$CLASSPATH":"$_LIBPATH"
 
 echo "Using JAVA_HOME:       $JAVA_HOME"
 
-java $JAVA_OPTS $CATALINA_OPTS \
+java $JAVA_OPTS \
   -classpath "$CLASSPATH" \
   org.apache.jackrabbit.standalone.Main \
   --backup \
-  --conf conf/source/repository.xml \
-  --repo data/source/repository \
-  --backup-conf conf/target/repository.xml \
-  --backup-repo data/target/repository
+  --conf $TOOL_HOME/conf/source/repository.xml \
+  --repo $TOOL_HOME/data/source/repository \
+  --backup-conf $TOOL_HOME/conf/target/repository.xml \
+  --backup-repo $TOOL_HOME/data/target/repository
+
