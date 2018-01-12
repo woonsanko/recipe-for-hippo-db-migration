@@ -3,6 +3,8 @@
 This recipe explains how to migrate the database of Hippo CMS to a different database.
 For example, from MySQL to PostreSQL, from MSSQL to MySQL or PostgreSQL, from Oracle to MySQL or PostgreSQL, etc.
 
+This recipe simply uses the [Backup and migration](http://jackrabbit.apache.org/jcr/standalone-server.html#Backup_and_migration) feature of [Apache Jackrabbit Standalone Server](http://jackrabbit.apache.org/jcr/standalone-server.html) and gives a step-by-step guide for easy migration. With the [Backup and migration](http://jackrabbit.apache.org/jcr/standalone-server.html#Backup_and_migration) feature, you can *migrate* an existing Hippo CMS Database from one specific Database to another Database, including all the content, binary and version history.
+
 ## Installation
 
 Download this Git repository as zip file and extract it to a folder wherer you want to execute this migration script.
