@@ -44,7 +44,4 @@ java $JAVA_OPTS \
   org.apache.jackrabbit.standalone.Main \
   --backup \
   --conf $TOOL_HOME/conf/source/repository.xml \
-  --repo $TOOL_HOME/data/source/repository \
-  --backup-conf $TOOL_HOME/conf/target/repository.xml \
-  --backup-repo $TOOL_HOME/data/target/repository
-
+  "$@"
