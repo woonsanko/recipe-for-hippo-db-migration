@@ -27,12 +27,6 @@
       <param name="minBlobSize" value="4194304"/>
     </PersistenceManager>
 
-    <SearchIndex class="org.apache.jackrabbit.core.query.lucene.SearchIndex">
-      <param name="path" value="${rep.home}/repository/index"/>
-      <param name="supportHighlighting" value="true"/>
-    </SearchIndex>
-
-    <ISMLocking class="org.apache.jackrabbit.core.state.FineGrainedISMLocking"/>
   </Workspace>
 
   <Versioning rootPath="${rep.home}/version">
