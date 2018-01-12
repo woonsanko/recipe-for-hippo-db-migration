@@ -7,6 +7,7 @@ This recipe explains how to migrate the database of Hippo CMS to a different dat
   - Step 1: Configure the source repository and target repository by adding ```conf/source-repository.xml``` and ```conf/target-repository.xml```.
   - Step 2: Copy all the necessary JAR files to ```lib/``` directory.
   - Step 3: Execute ```bin/migrate.sh```
+  - Step 4: Validation
 
 ## Step 1: Configure conf/source-repository and conf/target-repository
 
@@ -31,3 +32,10 @@ Execute it.
 $ sh bin/migrate.sh
 ```
 
+## Step 4: Validation
+
+After the Step 3, all the data has been copied to the target Hippo CMS Database.
+
+Find an example ```repository.xml``` for the new target Database systems under [Configure Hippo CMS for your Database Server](https://www.onehippo.org/library/deployment/configuring/databases.html) page.
+
+And, configure the database setting in ```conf/context.xml``` and deploy Hippo CMS to the target system with the new ```repository.xml```.
