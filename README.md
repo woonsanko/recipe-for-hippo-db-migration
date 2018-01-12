@@ -1,4 +1,4 @@
-# recipe-for-hippo-db-migration
+# Recipe for Migration Hippo CMS Database from one to another
 
 This recipe explains how to migrate the database of Hippo CMS to a different database.
 
