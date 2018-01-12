@@ -23,6 +23,7 @@ Download this repository as zip file and extract it to a folder wherer you want 
 
 Copy the following jar files in Hippo CMS Server to ```lib/``` directory:
 
+- ```jackrabbit-standalone-2.x.x.jar``` (which you can download from http://jackrabbit.apache.org/jcr/downloads.html).
 - $CATALINA_BASE/common/lib/*.jar
 - $CATALINA_BASE/shared/lib/*.jar
 - $CATALINA_BASE/webapps/cms/WEB-INF/lib/*.jar
