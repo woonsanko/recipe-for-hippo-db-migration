@@ -5,7 +5,7 @@ For example, from MySQL to PostreSQL, from MSSQL to MySQL or PostgreSQL, from Or
 
 ## Installation
 
-Download this repository as zip file and extract it to a folder wherer you want to execute this migration script.
+Download this Git repository as zip file and extract it to a folder wherer you want to execute this migration script.
 
 ## Steps Overview
 
