@@ -18,6 +18,7 @@ Download this repository as zip file and extract it to a folder wherer you want 
 - Find an example for your source and target Database systems under [Configure Hippo CMS for your Database Server](https://www.onehippo.org/library/deployment/configuring/databases.html) page.
 - Find the **Repository.xml for Repository Consistency Checker** section in each Database specific configuration page and copy the ```repository.xml``` in the section to ```conf/source-repository.xml``` or ```conf/target-repository.xml```.
 - You need to update the database connection settings in ```conf/source-repository.xml``` and ```conf/target-repository.xml```.
+- For H2 database, be referred to [conf/examples/h2-repository.xml](conf/examples/h2-repository.xml).
 
 ## Step 2: Copy all the necessary JAR files to lib/ directory
 
