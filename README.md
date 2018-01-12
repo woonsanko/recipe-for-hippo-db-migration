@@ -22,7 +22,7 @@ Download this Git repository as zip file and extract it to a folder wherer you w
 - Find an example for your source and backup Database systems under [Configure Hippo CMS for your Database Server](https://www.onehippo.org/library/deployment/configuring/databases.html) page.
 - Find the **Repository.xml for Repository Consistency Checker** section in each Database specific configuration page and copy the ```repository.xml``` in the section to ```conf/source-repository.xml``` or ```conf/backup-repository.xml```.
 - You need to update the database connection settings in ```conf/source-repository.xml``` and ```conf/backup-repository.xml```.
-- For H2 database, be referred to [conf/examples/h2-repository.xml](conf/examples/h2-repository.xml).
+- For H2 database which is typically used in local development environment with ```mvn -Pcargo.run```, simply copy [conf/examples/h2-repository.xml](conf/examples/h2-repository.xml) file as-is to both ```conf/source-repository.xml``` and ```conf/backup-repository.xml```.
 
 ## Step 2: Copy the repository directory of the Source system to local system where you execute this tool
 
