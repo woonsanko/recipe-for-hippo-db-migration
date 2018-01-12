@@ -42,6 +42,8 @@ $ sh bin/migrate.sh \
   --backup-repo backup-storage
 ```
 
+You can trace the log file, ```jackrabbit.log_IS_UNDEFINED```, while being executed.
+
 ## Step 4: Validation
 
 After the Step 3, all the data has been copied to the new *Target* Hippo CMS Database.
