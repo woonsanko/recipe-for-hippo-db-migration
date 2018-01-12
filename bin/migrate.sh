@@ -43,5 +43,4 @@ java $JAVA_OPTS \
   -classpath "$CLASSPATH" \
   org.apache.jackrabbit.standalone.Main \
   --backup \
-  --conf $TOOL_HOME/conf/source/repository.xml \
   "$@"
