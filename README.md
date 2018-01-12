@@ -1,6 +1,7 @@
 # Recipe for Migrating Hippo CMS Database from one to another
 
 This recipe explains how to migrate the database of Hippo CMS to a different database.
+For example, from MySQL to PostreSQL, from MSSQL to MySQL or PostgreSQL, from Oracle to MySQL or PostgreSQL, etc.
 
 ## Installation
 
