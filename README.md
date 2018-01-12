@@ -37,8 +37,8 @@ Execute it.
 ```bash
 $ sh bin/migrate.sh \
   --conf conf/source-repository.xml \
-  --repo source-storage \
   --backup-conf conf/backup-repository.xml \
+  --repo source-storage \
   --backup-repo backup-storage
 ```
 
