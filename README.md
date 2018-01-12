@@ -36,7 +36,7 @@ Copy the following jar files in Hippo CMS Server to ```lib/``` directory:
 - $CATALINA_BASE/common/lib/*.jar
 - $CATALINA_BASE/shared/lib/*.jar
 - $CATALINA_BASE/webapps/cms/WEB-INF/lib/*.jar
-- All the necessary JDBC jar files
+- All the necessary JDBC jar files for *Source* database and *Backup* (*Target*) database.
 
 ## Step 4: Execute bin/migrate.sh
 
