@@ -2,6 +2,10 @@
 
 This recipe explains how to migrate the database of Hippo CMS to a different database.
 
+## Installation
+
+Download this repository as zip file and extract it to a folder wherer you want to execute this migration script.
+
 ## Steps Overview
 
   - Step 1: Configure the source repository and target repository by adding ```conf/source-repository.xml``` and ```conf/target-repository.xml```.
