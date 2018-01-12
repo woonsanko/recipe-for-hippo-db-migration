@@ -9,9 +9,10 @@ Download this repository as zip file and extract it to a folder wherer you want 
 ## Steps Overview
 
   - Step 1: Configure the *Source* repository and *Backup* (that is, *Target*) repository by adding ```conf/source-repository.xml``` and ```conf/backup-repository.xml```.
-  - Step 2: Copy all the necessary JAR files to ```lib/``` directory.
-  - Step 3: Execute ```bin/migrate.sh```
-  - Step 4: Validation
+  - Step 2: Copy the repository directory of the *Source* system to local system
+  - Step 3: Copy all the necessary JAR files to ```lib/``` directory.
+  - Step 4: Execute ```bin/migrate.sh```
+  - Step 5: Validation
 
 ## Step 1: Configure Source repository and Backup (Target) repository
 
@@ -20,7 +21,13 @@ Download this repository as zip file and extract it to a folder wherer you want 
 - You need to update the database connection settings in ```conf/source-repository.xml``` and ```conf/backup-repository.xml```.
 - For H2 database, be referred to [conf/examples/h2-repository.xml](conf/examples/h2-repository.xml).
 
-## Step 2: Copy all the necessary JAR files to lib/ directory
+## Step 2: Copy the repository directory of the Source system to local system where you execute this tool
+
+- Copy the repository directory of the *Source* Hippo CMS system to a local folder.
+  Note that the repository directory is typically specified by either ```-Drepo.path=...``` system property (e.g, ```-Drepo.path=storage```) or ```repository-directory``` context init parameters in ```conf/context.xml```.
+- After copying it, remove ```workspaces/default/workspace.xml```, which should be regenerated.
+
+## Step 3: Copy all the necessary JAR files to lib/ directory
 
 Copy the following jar files in Hippo CMS Server to ```lib/``` directory:
 
@@ -31,7 +38,7 @@ Copy the following jar files in Hippo CMS Server to ```lib/``` directory:
 - $CATALINA_BASE/webapps/cms/WEB-INF/lib/*.jar
 - All the necessary JDBC jar files
 
-## Step 3: Execute bin/migrate.sh
+## Step 4: Execute bin/migrate.sh
 
 Execute it.
 
@@ -45,7 +52,7 @@ $ sh bin/migrate.sh \
 
 You can trace the log file, ```jackrabbit.log_IS_UNDEFINED```, while being executed.
 
-## Step 4: Validation
+## Step 5: Validation
 
 After the Step 3, all the data has been copied to the new *Target* Hippo CMS Database.
 
