@@ -7,7 +7,7 @@ This recipe simply uses the [Backup and migration](http://jackrabbit.apache.org/
 
 ## Installation
 
-Download this Git repository as zip file and extract it to a folder wherer you want to execute this migration script.
+Download this Git repository as zip file and extract it to a folder where you want to execute this migration script.
 
 ## Steps Overview
 
