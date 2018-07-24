@@ -62,3 +62,8 @@ After the Step 3, all the data has been copied to the new *Target* Hippo CMS Dat
 Find an example ```repository.xml``` for the new *Target* Database systems under [Configure Hippo CMS for your Database Server](https://www.onehippo.org/library/deployment/configuring/databases.html) page.
 
 And, configure the database setting in ```conf/context.xml``` and deploy Hippo CMS to the new *Target* system with the new ```repository.xml```.
+
+## Migration Demo Project
+
+You can find a migration demo project at [https://github.com/woonsanko/hippo-db-migration-demo](https://github.com/woonsanko/hippo-db-migration-demo), which demonstrates a simple migration from H2-based repository to another H2-based repository with simple validation steps.
+
