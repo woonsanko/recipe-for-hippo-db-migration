@@ -28,7 +28,10 @@ Download this Git repository as zip file and extract it to a folder where you wa
 
 - Copy the repository directory of the *Source* Hippo CMS system to a local folder.
   Note that the repository directory is typically specified by either ```-Drepo.path=...``` system property (e.g, ```-Drepo.path=storage```) or ```repository-directory``` context init parameters in ```conf/context.xml```.
-- After copying it, remove ```workspaces/default/workspace.xml```, which should be regenerated.
+- After copying it, backup ```workspaces/default/workspace.xml``` to ```workspaces/default/workspace-origin.xml```,
+  and edit ```workspaces/default/workspace.xml``` to keep only ```<FileSystem>``` and ```<PersistenceManager>``` elements only.
+  Also, those elements must be copied from the ```conf/source-repository.xml``` in the earlier step.
+  See [conf/examples/h2-workspace.xml](conf/examples/h2-workspace.xml) file as an example for H2 database.
 
 ## Step 3: Copy all the necessary JAR files to lib/ directory
 
@@ -52,8 +55,6 @@ $ sh bin/migrate.sh \
   --repo source-storage \
   --backup-repo backup-storage
 ```
-
-You can trace the log file, ```jackrabbit.log_IS_UNDEFINED```, while being executed.
 
 ## Step 5: Validation
 
