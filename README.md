@@ -65,6 +65,9 @@ Find an example ```repository.xml``` for the new *Target* Database systems under
 
 And, configure the database setting in ```conf/context.xml``` and deploy Hippo CMS to the new *Target* system with the new ```repository.xml```.
 
+When you test with H2 database as *Target*, you may copy the ```backup-storage``` folder to the repository directory (e.g, ```storage```) again when running and validating the CMS with the backuped database.
+After copying the folder and before running with ```mvn -Pcargo.run -Drepo.path=storage``` for instance, you should copy the ```workspaces/default/workspace-origin.xml``` (which you backed up in the earlier step) to the ```storage/worksapces/default/``` folder again to restore all the Hippo CMS specific functionalities.
+
 ## Migration Demo Project
 
 You can find a migration demo project at [https://github.com/woonsanko/hippo-db-migration-demo](https://github.com/woonsanko/hippo-db-migration-demo), which demonstrates a simple migration from H2-based repository to another H2-based repository with simple validation steps.
