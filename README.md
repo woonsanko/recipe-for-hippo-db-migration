@@ -45,6 +45,7 @@ Copy the following jar files in Hippo CMS Server to ```lib/``` directory:
 - ```hippo-addon-checker-x.x.x.jar``` (for the best compatible version from http://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-addon-checker/, 2.x for Hippo CMS 12 and 1.x for earlier versions).
 - $CATALINA_BASE/common/lib/*.jar
 - $CATALINA_BASE/shared/lib/*.jar
+- $CATALINA_BASE/lib/*.jar
 - $CATALINA_BASE/webapps/cms/WEB-INF/lib/*.jar
 - All the necessary JDBC jar files for *Source* database and *Backup* (*Target*) database.
 
