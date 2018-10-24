@@ -7,12 +7,12 @@ This recipe simply uses the [Backup and migration](http://jackrabbit.apache.org/
 
 ## Steps Overview
 
-  - Step 1: Download and install this recipe
+  - Step 1: Download and install this recipe.
   - Step 2: Configure the *Source* repository and *Backup* (that is, *Target*) repository by adding ```conf/source-repository.xml``` and ```conf/backup-repository.xml```.
-  - Step 3: Copy the repository directory of the *Source* system to local system
+  - Step 3: Copy the repository directory of the *Source* system to local system.
   - Step 4: Copy all the necessary JAR files to ```lib/``` directory.
-  - Step 5: Execute ```bin/migrate.sh```
-  - Step 6: Validation
+  - Step 5: Execute ```bin/migrate.sh```.
+  - Step 6: Validation.
 
 ## Step 1: Download and install this recipe
 
@@ -31,10 +31,11 @@ Download this Git repository as zip file (click on "Clone or download" button an
 - Copy the repository directory of the *Source* Hippo CMS system to a local folder. e.g. ```source-storage```.
   Note that the repository directory is typically specified by either ```-Drepo.path=...``` system property (e.g, ```-Drepo.path=storage```) or ```repository-directory``` context init parameters in ```conf/context.xml```.
 - After copying it, under the copied local repository directory (e.g. ```source-storage```),
-  backup ```workspaces/default/workspace.xml``` to ```workspaces/default/workspace-origin.xml```,
-  and edit ```workspaces/default/workspace.xml``` to keep only ```<FileSystem>``` and ```<PersistenceManager>``` elements.
-  Also, those elements must be copied from the ```conf/source-repository.xml``` in the earlier step.
-  See [conf/examples/h2-workspace.xml](conf/examples/h2-workspace.xml) file as an example for H2 database.
+  backup ```workspaces/default/workspace.xml``` to ```workspaces/default/workspace-origin.xml```.
+- Edit ```workspaces/default/workspace.xml``` to remove all content within the `<workspace>` and `</workspace>`.
+  Next, copy the `<Filesystem>``` and ```<Persistencemanager>` elements in the `conf/source-repository.xml`
+  and put in the `<workspace>` element.
+- See [conf/examples/h2-workspace.xml](conf/examples/h2-workspace.xml) file as an example for H2 database.
 
 ## Step 4: Copy all the necessary JAR files to lib/ directory
 
