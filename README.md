@@ -16,9 +16,8 @@ This recipe simply uses the [Backup and migration](http://jackrabbit.apache.org/
 
 ## Step 1: Download and install this recipe
 
-Download this Git repository as zip file and extract it to a folder where you want to execute this migration script.
+Download this Git repository as zip file (click on "Clone or download" button and choose "Download ZIP" link) and extract it to a folder where you want to execute this migration script.
 
-- Find an example for your source and backup Database systems under [Configure Hippo CMS for your Database Server]
 ## Step 2: Configure Source repository and Backup (Target) repository
 
 - Find an example for your source and backup Database systems under [Configure Hippo CMS for your Database Server](https://www.onehippo.org/library/deployment/configuring/databases.html) page.
