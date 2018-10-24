@@ -12,7 +12,8 @@ This recipe simply uses the [Backup and migration](http://jackrabbit.apache.org/
   - Step 3: Copy the repository directory of the *Source* system to local system.
   - Step 4: Copy all the necessary JAR files to ```lib/``` directory.
   - Step 5: Execute ```bin/migrate.sh```.
-  - Step 6: Validation.
+  - Step 6: Synchronize repository revision numbers.
+  - Step 7: Validation.
 
 ## Step 1: Download and install this recipe
 
@@ -61,7 +62,14 @@ $ sh bin/migrate.sh \
   --backup-repo backup-storage
 ```
 
-## Step 6: Validation
+## Step 6: Synchronize repository revision numbers
+
+The [Repository Maintenance](https://www.onehippo.org/library/enterprise/installation-and-configuration/repository-maintenance.html) page
+explains about repository revision tables: `REPOSITORY_LOCAL_REVISIONS` and `REPOSITORY_GLOBAL_REVISIONS`.
+
+In order to avoid applying revisions again on startup -- if those tables do not have the same data as the source database -- after migration, make sure the target database has the same data in both tables. Execute `insert` or `update` SQLs if necessary.
+
+## Step 7: Validation
 
 After the Step 3, all the data has been copied to the new *Target* Hippo CMS Database.
 
