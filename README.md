@@ -27,6 +27,7 @@ Download this Git repository as zip file (click on "Clone or download" button an
 
 ## Step 3: Copy the repository directory of the Source system to local system where you execute this tool
 
+- Stop the tomcat.
 - Copy the repository directory of the *Source* Hippo CMS system to a local folder. e.g. ```source-storage```.
   Note that the repository directory is typically specified by either ```-Drepo.path=...``` system property (e.g, ```-Drepo.path=storage```) or ```repository-directory``` context init parameters in ```conf/context.xml```.
 - After copying it, under the copied local repository directory (e.g. ```source-storage```),
