@@ -32,8 +32,8 @@ Download this Git repository as zip file (click on "Clone or download" button an
   Note that the repository directory is typically specified by either ```-Drepo.path=...``` system property (e.g, ```-Drepo.path=storage```) or ```repository-directory``` context init parameters in ```conf/context.xml```.
 - After copying it, under the copied local repository directory (e.g. ```source-storage```),
   backup ```workspaces/default/workspace.xml``` to ```workspaces/default/workspace-origin.xml```.
-- Edit ```workspaces/default/workspace.xml``` to remove all content within the `<workspace>` and `</workspace>`.
-  Next, copy the `<Filesystem>``` and ```<Persistencemanager>` elements in the `conf/source-repository.xml`
+- Edit ```workspaces/default/workspace.xml``` to remove all the content inside the `<workspace>` and `</workspace>`.
+  Next, copy the `<Filesystem>``` and ```<Persistencemanager>` elements from the `conf/source-repository.xml`
   and put in the `<workspace>` element.
 - See [conf/examples/h2-workspace.xml](conf/examples/h2-workspace.xml) file as an example for H2 database.
 
